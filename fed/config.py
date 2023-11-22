@@ -55,8 +55,8 @@ def get_cluster_config(job_name: str = None):
         assert job_name is not None, \
             "Initializing internal kv need to provide job_name."
         compatible_utils._init_internal_kv(job_name)
-        raw_dict = compatible_utils.kv.get(fed_constants.KEY_OF_CLUSTER_CONFIG)
-        _cluster_config = ClusterConfig(raw_dict)
+    raw_dict = compatible_utils.kv.get(fed_constants.KEY_OF_CLUSTER_CONFIG)
+    _cluster_config = ClusterConfig(raw_dict)
     return _cluster_config
 
 
@@ -67,8 +67,8 @@ def get_job_config(job_name: str = None):
         assert job_name is not None, \
             "Initializing internal kv need to provide job_name."
         compatible_utils._init_internal_kv(job_name)
-        raw_dict = compatible_utils.kv.get(fed_constants.KEY_OF_JOB_CONFIG)
-        _job_config = JobConfig(raw_dict)
+    raw_dict = compatible_utils.kv.get(fed_constants.KEY_OF_JOB_CONFIG)
+    _job_config = JobConfig(raw_dict)
     return _job_config
 
 
